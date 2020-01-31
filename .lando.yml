@@ -1,0 +1,53 @@
+name: clarity
+recipe: drupal8
+config:
+  php: '7.2'
+  via: apache:2.4
+  webroot: web/
+  database: mysql:5.7
+  drush: '^10'
+services:
+  appserver:
+    xdebug: true
+  mailhog:
+    type: mailhog:v1.0.0
+    portforward: false
+    hogfrom:
+      - appserver
+#  database:
+#    database: clarity
+#    username: drupal8
+#    password: drupal8
+#    host: database
+#    port: 3306
+  claritydb:
+    type: mysql
+    creds:
+      user: clarity
+      password: clarity
+      database: clarity
+#  solr:
+#    type: solr:7
+#    portforward: false
+#    core: lando
+#    config:
+#      dir: sites/all/modules/search_api_solr/solr-conf/7.x
+tooling:
+  vim:
+    service: appserver
+  sync-dev:
+    service: appserver
+    description: sync with Dev environment (need to connect to db)
+    cmd:
+      - composer install --prefer-dist
+      - drush uli
+  update-local:
+    service: appserver
+    description: sync all local config
+    cmd:
+      - drush cim -y
+      - drush cim -y
+      - drush cr
+      - drush uli
+  drush:
+    cmd: /app/vendor/bin/drush
