@@ -64,8 +64,23 @@ I = Config Ignore
 O = Config Override (hard-coded into the settings.php files $config array)
 
 
+### Configuration Management
+This repository leverages configuration splits and ignores to improve the configuration workflow.
 
-blah
+#### Configuration Ignore
+Config Ignore allows for a site to completely ignore whatever configuration is in the codebase.  For example, let's say on the live site we add the 'system.site' configuration to the ignore.  This will ignore any changes to configuration and never update the Site Title from what is in the database, regardless of changes to configuration.
+
+#### Configuration Split
+Config Split allows us to arbitrarily define sets of configuration that will get exported to separate directories when exporting, and get merged together when importing.  This site splits out configuration based on the Environment (local, dev, stage, prod).
+See [this tutorial](https://docs.acquia.com/blt/developer/config-split/) for examples.
+Example:
+We want to disable Drupal caching and aggregation locally and on develop, but not stage and production.
+
+1. Navigate to `/admin/config/development/configuration/config-split/` and select the split needed (develop in this case).  We want to use a graylist in this case, so select `system.performance` from the dropdown and save.
+2. Navigate to `/admin/config/development/performance` and uncheck caching and aggregation
+3. Run `lando drush cex -y` to export the configuration
+
+
 
 
 

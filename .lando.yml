@@ -14,12 +14,6 @@ services:
     portforward: false
     hogfrom:
       - appserver
-#  database:
-#    database: clarity
-#    username: drupal8
-#    password: drupal8
-#    host: database
-#    port: 3306
   claritydb:
     type: mysql
     creds:

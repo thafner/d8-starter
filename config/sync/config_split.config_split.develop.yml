@@ -1,0 +1,17 @@
+uuid: a770d997-d5bb-45c7-9e71-923d145b813e
+langcode: en
+status: false
+dependencies: {  }
+id: develop
+label: develop
+description: 'Provides configuration for LOCAL and DEVELOP environments.'
+folder: ../config/develop
+module:
+  devel: 0
+theme: {  }
+blacklist: {  }
+graylist:
+  - system.performance
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

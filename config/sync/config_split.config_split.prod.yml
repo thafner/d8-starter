@@ -1,0 +1,16 @@
+uuid: 43679d01-3d1c-4833-8bcf-2579726ee49a
+langcode: en
+status: false
+dependencies: {  }
+id: prod
+label: Prod
+description: 'Provides configuration for a PRODUCTION environment.'
+folder: ../config/prod
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist:
+  - system.site
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

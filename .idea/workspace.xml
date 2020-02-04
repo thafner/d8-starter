@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d44dd57-bd23-409c-ae95-4a3358b0c77e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/develop/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/sync/config_split.config_split.develop.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/sync/config_split.config_split.stage.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lando.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.lando.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/sites/default/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sync/config_ignore.settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/sync/config_ignore.settings.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sync/core.extension.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/sync/core.extension.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sync/devel.settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/develop/devel.settings.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sync/devel.toolbar.settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/develop/devel.toolbar.settings.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sync/system.menu.devel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/develop/system.menu.devel.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/settings.local.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/sites/default/settings.local.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +158,8 @@
       <option name="presentableId" value="Default" />
       <updated>1580489696539</updated>
       <workItem from="1580489697855" duration="2588000" />
-      <workItem from="1580492698940" duration="7670000" />
+      <workItem from="1580492698940" duration="11807000" />
+      <workItem from="1580825641646" duration="4920000" />
     </task>
     <servers />
   </component>

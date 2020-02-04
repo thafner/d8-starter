@@ -154,17 +154,6 @@ $settings['skip_permissions_hardening'] = TRUE;
  */
 # $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy'];
 
-//$databases['default']['default'] = [
-//  'database' => 'clarity',
-//  'username' => 'drupal8',
-//  'password' => 'drupal8',
-//  'host' => 'database',
-//  'port' => '3306',
-//  'driver' => 'mysql',
-//  'prefix' => '',
-//  'collation' => 'utf8mb4_general_ci',
-//];
-
 $databases['default']['default'] = [
   'database' => 'clarity',
   'username' => 'clarity',
@@ -177,3 +166,6 @@ $databases['default']['default'] = [
 ];
 
 $base_url = "http://claritystarter.lndo.site";
+
+
+$config['config_split.config_split.develop']['status'] = TRUE;

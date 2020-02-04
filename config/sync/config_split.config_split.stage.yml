@@ -1,0 +1,15 @@
+uuid: 1759b238-85de-4f88-bb96-395951a06526
+langcode: en
+status: false
+dependencies: {  }
+id: stage
+label: Stage
+description: 'Provides configuration for a STAGE environment.  This should closely mimic the PRODUCTION environment.'
+folder: ../config/stage
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
