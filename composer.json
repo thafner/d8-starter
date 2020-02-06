@@ -27,6 +27,7 @@
         "drupal/devel": "^2.1",
         "drupal/twig_tweak": "^2.4",
         "drush/drush": "^10.2",
+        "vlucas/phpdotenv": "^4.1",
         "webmozart/assert": "^1.6"
     },
     "require-dev": {
