@@ -5,3 +5,7 @@ global:
       css/base.css: {}
   js:
     js/base.js: {}
+    dependencies:
+      - core/drupal
+      - core/jquery
+      - core/jquery.once

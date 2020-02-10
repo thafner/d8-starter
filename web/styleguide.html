@@ -117,16 +117,138 @@
         <a class="button small" href="/styleguide.html">So Small</a>
         <a class="button" href="/styleguide.html">So Basic</a>
         <a class="button secondary" href="/styleguide.html">Secondary basic</a>
-        <a class="button success" href="/styleguide.html">Success basic</a>
+        <a class="button rounded success" href="/styleguide.html">Success basic</a>
         <a class="button warning" href="/styleguide.html">Warning basic</a>
         <a class="button large" href="/styleguide.html">So Large</a>
         <a class="button expanded" href="/styleguide.html">Such Expand</a>
         <a class="button small expanded" href="/styleguide.html">Wow, Small Expand</a>
       </div>
     </div>
+    <hr>
+    <div class="element--accordion">
+      <h2>Accordion</h2>
+      <div>
+        <ul class="accordion" data-accordion>
+          <li class="accordion-item is-active" data-accordion-item>
+            <!-- Accordion tab title -->
+            <a href="#" class="accordion-title">Accordion 1</a>
+            <div class="accordion-content" data-tab-content>
+              <p>Panel 1. Lorem ipsum dolor</p>
+            </div>
+          </li>
+          <li class="accordion-item" data-accordion-item>
+            <a href="#" class="accordion-title">Accordion 2</a>
+            <div class="accordion-content" data-tab-content>
+              <p>Panel 2. Lorem ipsum dolor</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="element--tabs">
+      <h2>Tabs</h2>
+      <div>
+        <ul class="tabs" data-tabs id="example-tabs">
+          <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+          <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="example-tabs">
+          <div class="tabs-panel is-active" id="panel1">
+            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+          </div>
+          <div class="tabs-panel" id="panel2">
+            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="element--forms">
+      <h2>Form Elements</h2>
+      <div>
+
+        <form>
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-12 cell">
+                <label>Text input
+                  <input type="text" placeholder=".medium-6.cell">
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label>Tel
+                  <input type="tel" placeholder=".medium-6.cell">
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label>Email
+                  <input type="email" placeholder=".medium-6.cell">
+                </label>
+              </div>
+              <div class="medium-12 cell">
+                <label>
+                  Number Element
+                  <input type="number" value="100">
+                </label>
+              </div>
+              <div class="medium-12 cell">
+                <label>Select Menu
+                  <select>
+                    <option value="husker">Husker</option>
+                    <option value="starbuck">Starbuck</option>
+                    <option value="hotdog">Hot Dog</option>
+                    <option value="apollo">Apollo</option>
+                  </select>
+                </label>
+                <div class="medium-12 cell">
+                  <div class="grid-x grid-padding-x">
+                    <fieldset class="large-5 cell">
+                      <legend>Choose Your Favorite</legend>
+                      <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">Red</label>
+                      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+                      <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+                    </fieldset>
+                    <fieldset class="large-7 cell">
+                      <legend>Check these out</legend>
+                      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+                      <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr>
+    <div class="element--pagination">
+      <h2>Pagination</h2>
+      <div>
+        <nav aria-label="Pagination">
+          <ul class="pagination text-center">
+            <li class="pagination-previous disabled">Previous</li>
+            <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+            <li><a href="#" aria-label="Page 2">2</a></li>
+            <li><a href="#" aria-label="Page 3">3</a></li>
+            <li><a href="#" aria-label="Page 4">4</a></li>
+            <li class="ellipsis"></li>
+            <li><a href="#" aria-label="Page 12">12</a></li>
+            <li><a href="#" aria-label="Page 13">13</a></li>
+            <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
   </div>
 
-
+  <script src="/core/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/core/misc/drupal.js"></script>
+  <script src="/core/misc/drupal.init.js"></script>
   <script src="/themes/contrib/zurb_foundation/js/foundation.min.js"></script>
   <script src="/themes/contrib/zurb_foundation/js/foundation_init.js"></script>
   <script src="/themes/contrib/zurb_foundation/js/motion-ui.min.js"></script>
