@@ -80,8 +80,40 @@ We want to disable Drupal caching and aggregation locally and on develop, but no
 2. Navigate to `/admin/config/development/performance` and uncheck caching and aggregation
 3. Run `lando drush cex -y` to export the configuration
 
+## Team Workflow
+This project follows the gitflow workflow with an additonal stage branch.  See [here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) and [here](https://nvie.com/posts/a-successful-git-branching-model/) for additional details.
 
+1. Develop and stage branches are created from master
+2. Feature branches are created from develop
+3. A developer implements a change to the feature branch
+4. When a feature is complete it is merged into the develop branch
+5. When a release is ready a release branch is created from develop
+6. Minor bugs can be updated in the release branch as-needed.
+7. When the release branch is "done" it is merged into develop and master
+8. If an issue in master is detected a hotfix branch is created from master
+9. Once the hotfix is complete it is merged to both develop and master
 
+#### Code Example
+```
+git checkout develop
+git pull origin develop
+git checkout -b feature_branch
+# work happens on feature branch
+git push -u origin feature_branch
+# Create PR for feature_branch into DEVELOP
+# delete feature_branch
+```
 
-
-
+When a release is required, the merge manager will create a release
+```
+git checkout develop
+git pull origin develop
+git checkout -b release/0.1.0
+# Create a PR for release/0.1.0 into STAGE
+# Any bugfixes will be branched from release/0.1.0 and then also merged into DEVELOP
+# Create a PR for release/0.1.0 into MASTER
+# Create a PR for release/0.1.0 into DEVELOP
+git checkout master
+git tag -a v0.1.0 -m "Version 0.1.0"
+git push origin --tags
+```
